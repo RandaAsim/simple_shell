@@ -18,10 +18,10 @@ int main(int argc, char **argv)
 		input = get_line();
 		if (input == NULL)
 		{
-			if(isatty(0))
+			if (isatty(0))
 				write(1, "\n", 1);
 			return (0);
 		}
+		free(input);
 	}
-	free(input);
 }

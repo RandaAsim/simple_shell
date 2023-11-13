@@ -12,10 +12,9 @@ char *get_line(void)
 	size_t n = 0;
 	ssize_t n_read;
 
-	if(isatty(2))
-	{
+	if (isatty(0))
 		write(1, "$ ", 2);
-	}
+
 	n_read = getline(&input, &n, stdin);
 	if (n_read == -1)
 	{
