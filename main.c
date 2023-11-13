@@ -15,9 +15,13 @@ int main(int argc, char **argv)
 
 	while(1)
 	{
-		write(1, "$ ", 2);
 		input = get_line();
 		if (input == NULL)
+		{
+			if(isatty(0))
+				write(1, "\n", 1);
 			return (0);
+		}
 	}
+	free(input);
 }

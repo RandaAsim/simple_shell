@@ -12,7 +12,7 @@ char *get_line(void)
 	size_t n = 0;
 	ssize_t n_read;
 
-	if(isatty(2) == 1)
+	if(isatty(2))
 	{
 		write(1, "$ ", 2);
 	}
