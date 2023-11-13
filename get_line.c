@@ -3,7 +3,7 @@
 /**
  * get_line - read line from user
  *
- * Return : Always 0 (success)
+ * Return: Always 0 (success)
  */
 
 char *get_line(void)

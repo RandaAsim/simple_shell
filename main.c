@@ -13,7 +13,7 @@ int main(int argc, char **argv)
 	(void) argc;
 	(void) argv;
 
-	while(1)
+	while (1)
 	{
 		input = get_line();
 		if (input == NULL)
