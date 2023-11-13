@@ -8,7 +8,7 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
-
+char *get_line(void);
 void display_prompt();
 int execute_command(char *command);
 
