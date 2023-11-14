@@ -3,7 +3,7 @@
 char **tokenize_prompt(char *input)
 {
 	char *token, *input_copy = NULL;
-	char delim[] = " /t/n";
+	char delim[] = " \t\n";
 	char **tokens = NULL;
 	int count = 0, i = 0;
 	int j;
