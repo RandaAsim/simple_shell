@@ -9,7 +9,7 @@
 #include <sys/wait.h>
 
 char *get_line(void);
-void display_prompt();
+void **tokenize_prompt(char *input);
 int execute_command(char *command);
 
 #endif /* SHELL_H */
