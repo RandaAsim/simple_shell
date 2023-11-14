@@ -10,6 +10,8 @@
 int main(int argc, char **argv)
 {
 	char *input = NULL;
+	char stat;
+	char **tokens = NULL;
 	(void) argc;
 	(void) argv;
 
@@ -20,12 +22,13 @@ int main(int argc, char **argv)
 		{
 			if (isatty(0))
 				write(1, "\n", 1);
-			return (0);
+			return (stat);
 		}
-		free(input);
 
 		tokens = tokenize_prompt(input);
-		if (tokens != NULL)
-			free(tokens);
+		if (!tokens)
+			continue;
+
+		stat = _process(tokens, argv);
 	}
 }
