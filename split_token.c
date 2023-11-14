@@ -4,7 +4,7 @@
 
 
 
-void **tokenize_prompt(char *input)
+char **tokenize_prompt(char *input)
 {
 	char *token, *input_copy = NULL;
 	char delim[] = " /t/n";
@@ -16,7 +16,7 @@ void **tokenize_prompt(char *input)
 	if (input_copy == NULL);
 	{
 		perror("strdup");
-		return (1);
+		return (NULL);
 	}
 	token = strtok(input_copy, delim);
 	if (token == NULL)
