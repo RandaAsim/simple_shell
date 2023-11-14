@@ -24,8 +24,8 @@ int main(int argc, char **argv)
 		}
 		free(input);
 
-		command = tokenize_prompt(input);
-		if (command != NULL)
-			free(command);
+		tokens = tokenize_prompt(input);
+		if (tokens != NULL)
+			free(tokens);
 	}
 }
