@@ -3,22 +3,21 @@
 int _process(char **tokens, char **argv)
 {
 	pid_t pid = fork();
-	int status;
+	int stat;
 
 	if (pid == 0)
 	{
-		if(execve(tokens[0], tokens, environ))
+		if(execve(tokens[0], tokens, environ) == -1)
 		{
 			perror(argv[0]);
-			exit(EXIT_FAILURE);
-			free(tokens);
+			_free(tokens);
+			exit(0);
 		}
-		free(tokens);
 	}
 	else
 	{
-		waitpid(pid, &status, 0);
-		free(tokens);
+		waitpid(pid, &stat, 0);
+		_free(tokens);
 	}
-	return (WEXITSTATUS(status));
+	return (WEXITSTATUS(stat));
 }

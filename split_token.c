@@ -1,4 +1,5 @@
 #include "shell.h"
+
 char **tokenize_prompt(char *input)
 {
 	char *token, *input_copy = NULL;
@@ -12,7 +13,6 @@ char **tokenize_prompt(char *input)
 	input_copy = _strdup(input);
 	if (input_copy == NULL)
 	{
-		perror("strdup");
 		return (NULL);
 	}
 

@@ -16,6 +16,7 @@ char **tokenize_prompt(char *input);
 int execute_command(char *command);
 int _process(char **tokens, char **argv);
 
+void _free(char **array);
 char *_strdup(const char *str);
 
 #endif /* SHELL_H */
