@@ -19,6 +19,12 @@ void **tokenize_prompt(char *input)
 		return (1);
 	}
 	token = strtok(input_copy, delim);
+	if (token == NULL)
+	{
+		free(input_copy);
+		free(input);
+		return (NULL);
+	}
 
 	while(token)
 	{
@@ -36,7 +42,7 @@ void **tokenize_prompt(char *input)
 
 	while (token)
 	{
-		tokens[i] = token;
+		tokens[i] = _strdup(token);
 		token = strtok(NULL, delim);
 		i++;
 	}
