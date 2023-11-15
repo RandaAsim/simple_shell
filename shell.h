@@ -18,5 +18,6 @@ int _process(char **tokens, char **argv);
 
 void _free(char **array);
 char *_strdup(const char *str);
+char *_getpath(char *user_command);
 
 #endif /* SHELL_H */
