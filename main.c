@@ -13,7 +13,6 @@ int main(int argc, char **argv)
 	char stat;
 	char **tokens = NULL;
 	(void) argc;
-	(void) argv;
 
 	while (1)
 	{

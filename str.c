@@ -1,5 +1,13 @@
 #include "shell.h"
 
+
+/**
+ * _strdup - function to duplicate input
+ * @str: string
+ *
+ * Return: pointer to string
+ */
+
 char *_strdup(const char *str)
 {
 	char *p;

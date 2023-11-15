@@ -1,5 +1,12 @@
 #include "shell.h"
 
+/**
+ * _process - execute the command
+ * @tokens: command entered by user
+ * @argv: argument value
+ * Return: exit status
+ */
+
 int _process(char **tokens, char **argv)
 {
 	pid_t pid = fork();
@@ -7,7 +14,7 @@ int _process(char **tokens, char **argv)
 
 	if (pid == 0)
 	{
-		if(execve(tokens[0], tokens, environ) == -1)
+		if (execve(tokens[0], tokens, environ) == -1)
 		{
 			perror(argv[0]);
 			_free(tokens);
